@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>감사합니다</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;  /* Changed from center to flex-start */
+            min-height: 100vh;
+            background: url("{{ url_for('static', filename='turtleshit.jpg') }}");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 50px;  /* Added padding to give some space from the top */
+        }
+        .thanks-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 400px;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .home-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .home-button:hover {
+            background-color: #1557b0;
+        }
+        .bottom-button {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 12px 24px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .bottom-button:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+    <div class="thanks-container">
+        <h1>🌍 축하합니다! 🌍</h1>
+        <p>모든 환경 퀘스트를 완료하셨습니다.</p>
+        <p>지구를 위한 당신의 노력에 감사드립니다!</p>
+    </div>
+    <a href="{{ url_for('login') }}" class="bottom-button">처음으로</a>
+</body>
+</html>
